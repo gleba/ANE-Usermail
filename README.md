@@ -1,5 +1,5 @@
 # ANE-Usermail
-check user email configuration
+check user email configuration adobe air native extension for ios and android
 
 
 ## Dependencies
@@ -24,8 +24,7 @@ check user email configuration
     2. ```ant```
         
 ## Usage
- 1. Add UserMail.ane to project
+ 1. Add to you project **UserMail.ane** from ```bin``` directory
  2. ```UserMail.isAvalable()``` returned ```false``` or ```true``` if user mail avalable 
 
-
-[testapp](https://github.com/gleba/ANE-Usermail/blob/master/testapp/src/Main.as)
+[Example test application class](https://github.com/gleba/ANE-Usermail/blob/master/testapp/src/Main.as)
