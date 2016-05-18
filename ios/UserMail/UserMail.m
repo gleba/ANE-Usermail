@@ -1,4 +1,5 @@
 #import "UserMail.h"
+
 @import MessageUI;
 
 void UserMailInitializer(void** extDataToSet, FREContextInitializer* ctxInitializerToSet, FREContextFinalizer* ctxFinalizerToSet)
@@ -38,9 +39,8 @@ void ContextFinalizer(FREContext ctx)
 FREObject canSend(FREContext ctx, void *data, uint32_t argc, FREObject argv[])
 {
     BOOL result;
-    Class mailClass = (NSClassFromString(@"MFMailComposeViewController"));
     
-    if ([mailClass canSendMail]) {
+    if ([MFMailComposeViewController canSendMail]) {
         result = YES;
     } else {
         result = NO;

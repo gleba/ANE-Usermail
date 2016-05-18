@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		356657351CEBF562007E35C3 /* UserMail.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 356657341CEBF562007E35C3 /* UserMail.h */; };
 		356657371CEBF562007E35C3 /* UserMail.m in Sources */ = {isa = PBXBuildFile; fileRef = 356657361CEBF562007E35C3 /* UserMail.m */; };
+		358F10C71CECBD7000C65488 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 358F10C61CECBD7000C65488 /* MessageUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,6 +30,7 @@
 		356657341CEBF562007E35C3 /* UserMail.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserMail.h; sourceTree = "<group>"; };
 		356657361CEBF562007E35C3 /* UserMail.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserMail.m; sourceTree = "<group>"; };
 		3566573D1CEBF682007E35C3 /* FlashRuntimeExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlashRuntimeExtensions.h; sourceTree = "<group>"; };
+		358F10C61CECBD7000C65488 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				358F10C71CECBD7000C65488 /* MessageUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,6 +48,7 @@
 		356657281CEBF562007E35C3 = {
 			isa = PBXGroup;
 			children = (
+				358F10C61CECBD7000C65488 /* MessageUI.framework */,
 				3566573D1CEBF682007E35C3 /* FlashRuntimeExtensions.h */,
 				356657331CEBF562007E35C3 /* UserMail */,
 				356657321CEBF562007E35C3 /* Products */,
@@ -219,6 +223,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
+				ENABLE_BITCODE = YES;
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-FlashRuntimeExtensions.h",
@@ -235,6 +240,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
+				ENABLE_BITCODE = YES;
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-FlashRuntimeExtensions.h",

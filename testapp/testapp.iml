@@ -13,8 +13,8 @@
         </dependencies>
         <compiler-options />
         <packaging-air-desktop />
-        <packaging-android enabled="true" package-file-name="Main" />
-        <packaging-ios enabled="true" package-file-name="Main">
+        <packaging-android enabled="true" use-generated-descriptor="false" custom-descriptor-path="$MODULE_DIR$/Main-app.xml" package-file-name="Main" />
+        <packaging-ios enabled="true" use-generated-descriptor="false" custom-descriptor-path="$MODULE_DIR$/Main-app.xml" package-file-name="Main">
           <AirSigningOptions keystore-path="$MODULE_DIR$/../../../flexis.lab/snow-streams/keys/certInHouse.p12" provisioning-profile-path="$MODULE_DIR$/../../../flexis.lab/snow-streams/keys/wildcard_18.mobileprovision" />
         </packaging-ios>
       </configuration>
