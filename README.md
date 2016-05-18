@@ -15,17 +15,17 @@ check user email configuration
     - Download Android SDK build tools (rev 20)
     - Download Android 4.0.3 (API 15)
 
-2. edit ```build/build.config```
+2. Edit ```build/build.config```
     - set valid ```air.sdk.home``` path 
     - set valid ```android.sdk.home``` path
     
-3. build bash commands
+3. Build bash commands
     1. ```cd build``` 
     2. ```ant```
         
 ## Usage
  1. Add UserMail.ane to project
- 2. ```UserMail.isAvalable()``` returned false or true if user mail avalable 
+ 2. ```UserMail.isAvalable()``` returned ```false``` or ```true``` if user mail avalable 
 
 
-example app
+[testapp](https://github.com/gleba/ANE-Usermail/blob/master/testapp/src/Main.as)
