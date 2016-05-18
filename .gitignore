@@ -2,3 +2,4 @@ out
 gen
 .idea
 ios/build
+!testapp/testapp.iml
