@@ -10,18 +10,22 @@ check user email configuration
 - Ant
 
 ## Build steps
-a. Download packages in Android SDK Manager
-    1. Download Android SDK build tools (rev 20)
-    2. Download Android 4.0.3 (API 15)
 
-b. edit ```build/build.config```
-        1. set valid ```air.sdk.home``` path 
-        2. set valid ```android.sdk.home``` path
+1. Download packages in Android SDK Manager
+    - Download Android SDK build tools (rev 20)
+    - Download Android 4.0.3 (API 15)
+
+2. edit ```build/build.config```
+    - set valid ```air.sdk.home``` path 
+    - set valid ```android.sdk.home``` path
     
-c. build bash commands
-        1. ```cd build``` 
-        2. ```ant```
+3. build bash commands
+    1. ```cd build``` 
+    2. ```ant```
         
 ## Usage
- - Add UserMail.ane to project 
- - Call ```UserMail.isAvalable()``` in AS3 Class
+ 1. Add UserMail.ane to project
+ 2. ```UserMail.isAvalable()``` returned false or true if user mail avalable 
+
+
+example app
