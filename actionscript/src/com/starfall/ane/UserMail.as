@@ -36,8 +36,18 @@ public class UserMail {
 
 
     public function isAvalable():Object {
-        if (useNativeExtension()) return extContext.call("canSend")
-        else return false
+        if (useNativeExtension()) {
+            var result = false;
+            if (extContext)
+                try {
+                    result = extContext.call("canSend")
+                } catch (e:Error) {
+                    return false
+                }
+            return result
+        } else {
+            return false
+        }
     }
 
     private function extContext_statusHandler(event:StatusEvent):void {
