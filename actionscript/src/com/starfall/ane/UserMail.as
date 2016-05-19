@@ -35,9 +35,9 @@ public class UserMail {
     }
 
 
-    public function isAvalable():Object {
+    public function isAvalable():Boolean {
         if (useNativeExtension()) {
-            var result = false;
+            var result:Boolean = false;
             if (extContext)
                 try {
                     result = extContext.call("canSend")

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="Flex" version="4">
-  <component name="FlexBuildConfigurationManager" active="testapp">
+  <component name="FlexBuildConfigurationManager" active="starfall-usermail">
     <configurations>
-      <configuration name="testapp" target-platform="Mobile" pure-as="true" main-class="Main" output-file="Main.swf" output-folder="$MODULE_DIR$/../out/production/testapp">
+      <configuration name="starfall-usermail" target-platform="Mobile" pure-as="true" main-class="Main" output-file="starfall-usermail.swf" output-folder="$MODULE_DIR$/../out/production/testapp">
         <dependencies target-player="21.0">
           <entries>
             <entry library-id="851978e8-e3c5-4753-bd37-687edf2347aa">
@@ -13,8 +13,8 @@
         </dependencies>
         <compiler-options />
         <packaging-air-desktop />
-        <packaging-android enabled="true" use-generated-descriptor="false" custom-descriptor-path="$MODULE_DIR$/Main-app.xml" package-file-name="Main" />
-        <packaging-ios enabled="true" use-generated-descriptor="false" custom-descriptor-path="$MODULE_DIR$/Main-app.xml" package-file-name="Main">
+        <packaging-android enabled="true" use-generated-descriptor="false" custom-descriptor-path="$MODULE_DIR$/Main-app.xml" package-file-name="starfall-usermail" />
+        <packaging-ios enabled="true" use-generated-descriptor="false" custom-descriptor-path="$MODULE_DIR$/Main-app.xml" package-file-name="starfall-usermail">
           <AirSigningOptions keystore-path="$MODULE_DIR$/../../../flexis.lab/snow-streams/keys/certInHouse.p12" provisioning-profile-path="$MODULE_DIR$/../../../flexis.lab/snow-streams/keys/wildcard_18.mobileprovision" />
         </packaging-ios>
       </configuration>
