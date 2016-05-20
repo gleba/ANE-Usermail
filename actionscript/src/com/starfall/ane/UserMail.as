@@ -9,16 +9,6 @@ public class UserMail {
     private static var _instance:UserMail = null;
     private static var _shouldCreateInstance:Boolean = false;
 
-    public function UserMail() {
-        if (useNativeExtension()) {
-            trace("Extension Context Created Constructor");
-            extContext = ExtensionContext.createExtensionContext("com.starfall.ane.UserMail", null);
-            extContext.addEventListener(StatusEvent.STATUS, extContext_statusHandler);
-        }
-        else {
-            trace("ERROR CONTEXT NOT INITIALIZED!!");
-        }
-    }
 
     public static function get instance():UserMail {
 
@@ -35,6 +25,17 @@ public class UserMail {
     }
 
 
+    public function UserMail() {
+        if (useNativeExtension()) {
+            trace("Extension Context Created Constructor");
+            extContext = ExtensionContext.createExtensionContext("com.starfall.ane.UserMail", null);
+            extContext.addEventListener(StatusEvent.STATUS, extContext_statusHandler);
+        }
+        else {
+            trace("ERROR CONTEXT NOT INITIALIZED!!");
+        }
+    }
+
     public function isAvalable():Boolean {
         if (useNativeExtension()) {
             var result:Boolean = false;
@@ -50,8 +51,11 @@ public class UserMail {
         }
     }
 
+    public var logger:Function;
+
     private function extContext_statusHandler(event:StatusEvent):void {
         trace("ane:" + event.level)
+        if (logger != null) logger(event.level)
     }
 
 

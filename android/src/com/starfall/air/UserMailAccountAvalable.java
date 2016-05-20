@@ -10,6 +10,7 @@ import android.util.Patterns;
 import com.adobe.fre.FREContext;
 import com.adobe.fre.FREFunction;
 import com.adobe.fre.FREObject;
+import org.json.JSONObject;
 
 import java.util.List;
 import java.util.regex.Pattern;
@@ -19,12 +20,12 @@ import java.util.regex.Pattern;
     @Override
     public FREObject call(FREContext freContext, FREObject[] freObjects) {
         try {
-
-            Pattern emailPattern = Patterns.EMAIL_ADDRESS;
+            JSONObject ids = new JSONObject();
+            ids.put("com.google", true);
             Account[] accounts = AccountManager.get(freContext.getActivity().getBaseContext()).getAccounts();
             for (Account account : accounts) {
-                if (emailPattern.matcher(account.name).matches()) {
-                    UserMailExtension.log(account.name);
+                UserMailExtension.log(account.type);
+                if (ids.has(account.type)) {
                     return FREObject.newObject(true);
                 }
             }
