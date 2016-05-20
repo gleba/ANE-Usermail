@@ -20,16 +20,15 @@ import java.util.regex.Pattern;
     @Override
     public FREObject call(FREContext freContext, FREObject[] freObjects) {
         try {
-            JSONObject ids = new JSONObject();
-            ids.put("com.google", true);
             Account[] accounts = AccountManager.get(freContext.getActivity().getBaseContext()).getAccounts();
+            Boolean hasAccount = false;
             for (Account account : accounts) {
-                UserMailExtension.log(account.type);
-                if (ids.has(account.type)) {
-                    return FREObject.newObject(true);
+                UserMailExtension.log("name:"+account.name+" id:"+account.type);
+                if (UserMailExtension.accoundIds.has(account.type)) {
+                    hasAccount = true;
                 }
             }
-            return FREObject.newObject(false);
+            return FREObject.newObject(hasAccount);
         } catch (Exception exception) {
             UserMailExtension.log("UserMailCanSend exception " + exception.toString());
         }

@@ -3,6 +3,8 @@ package com.starfall.air;
 
 import com.adobe.fre.FREContext;
 import com.adobe.fre.FREExtension;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 public class UserMailExtension implements FREExtension {
 
@@ -19,6 +21,12 @@ public class UserMailExtension implements FREExtension {
 
     @Override
     public void initialize() {
+        try {
+            UserMailExtension.accoundIds.put("com.google", true);
+            UserMailExtension.accoundIds.put("com.samsung.android.email", true);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
     }
 
     public static void log(String message) {
@@ -26,4 +34,6 @@ public class UserMailExtension implements FREExtension {
             context.dispatchStatusEventAsync("LOGGING", message);
         }
     }
+
+    public static JSONObject accoundIds = new JSONObject();
 }
