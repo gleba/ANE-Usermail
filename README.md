@@ -25,7 +25,7 @@ check user email configuration adobe air native extension for ios and android
         
 ## Usage
 - Add to you project **UserMail.ane** from ```bin``` directory
-	- Android substep 1: Add user permission string to Adobe AIR Application Descriptor
+- Android substep 1: Add user permission string to Adobe AIR Application Descriptor
 
 ```
     <android>
@@ -39,7 +39,7 @@ check user email configuration adobe air native extension for ios and android
     </android>
     
 ```
-	- Android substep 2 (optional): Configure additional mail account types 
+- Android substep 2 (optional): Configure additional mail account types 
 
 
 ```
