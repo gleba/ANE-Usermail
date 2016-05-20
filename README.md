@@ -25,7 +25,7 @@ check user email configuration adobe air native extension for ios and android
         
 ## Usage
  1. Add to you project **UserMail.ane** from ```bin``` directory
-    Android substep 1: Add user permission string to Adobe AIR Application Descriptor File
+  2. Android substep 1: Add user permission string to Adobe AIR Application Descriptor File
     ```
     <android>
         <manifestAdditions>
@@ -37,7 +37,7 @@ check user email configuration adobe air native extension for ios and android
             </manifestAdditions>
     </android>
     ```
-    Android substep 2 (optional): Configure additional mail account types 
+  2. Android substep 2 (optional): Configure additional mail account types 
     ```
     //..Android additional account types configurations
             UserMail.instance.addAndroidAccountType("com.yandex.passport");
