@@ -25,6 +25,19 @@ check user email configuration adobe air native extension for ios and android
         
 ## Usage
  1. Add to you project **UserMail.ane** from ```bin``` directory
- 2. ```UserMail.isAvalable()``` returned ```false``` or ```true``` if user mail avalable 
+ 2. Add ```<uses-permission android:name="android.permission.GET_ACCOUNTS" />``` to AIR Application Descriptor File
+```
+    <android>
+        <manifestAdditions>
+            <![CDATA[
+            <manifest android:installLocation="auto">
+                <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+            </manifest>
+            ]]>
+            </manifestAdditions>
+    </android>
+    ```
+    
+ 3. ```UserMail.isAvalable()``` returned ```false``` or ```true``` if user mail avalable 
 
 [Example test application class](https://github.com/gleba/ANE-Usermail/blob/master/testapp/src/Main.as)
