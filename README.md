@@ -39,7 +39,7 @@ check user email configuration adobe air native extension for ios and android
     </android>
     
 ```
-- Android substep 2 (optional): Configure additional mail account types 
+- Android substep 2 (optional): Configure additional mail account types:
 
 
 ```
@@ -51,7 +51,9 @@ check user email configuration adobe air native extension for ios and android
     //...etc
 ```    
             
-- ```UserMail.isAvalable()``` returned ```false``` or ```true``` if user mail avalable 
+- Final step:
+
+```UserMail.isAvalable()``` returned ```false``` or ```true``` if user mail avalable 
 
 [Example test application class](https://github.com/gleba/ANE-Usermail/blob/master/testapp/src/Main.as)
 
