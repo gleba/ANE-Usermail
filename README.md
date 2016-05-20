@@ -24,9 +24,10 @@ check user email configuration adobe air native extension for ios and android
     2. ```ant```
         
 ## Usage
-   1. Add to you project **UserMail.ane** from ```bin``` directory
-    2. Android substep 1: Add user permission string to Adobe AIR Application Descriptor File
-            ```
+- Add to you project **UserMail.ane** from ```bin``` directory
+	- Android substep 1: Add user permission string to Adobe AIR Application Descriptor
+
+```
     <android>
         <manifestAdditions>
             <![CDATA[
@@ -36,17 +37,21 @@ check user email configuration adobe air native extension for ios and android
             ]]>
             </manifestAdditions>
     </android>
-            ```
-     2. Android substep 2 (optional): Configure additional mail account types 
-            ```
+    
+```
+	- Android substep 2 (optional): Configure additional mail account types 
+
+
+```
     //..Android additional account types configurations
             UserMail.instance.addAndroidAccountType("com.yandex.passport");
             UserMail.instance.addAndroidAccountType("ru.mail.mailapp");
             UserMail.instance.addAndroidAccountType("com.sfr.android.sfrmail");
             UserMail.instance.addAndroidAccountType("com.cloudmagic.mail");
     //...etc
-            ```         
-   2. ```UserMail.isAvalable()``` returned ```false``` or ```true``` if user mail avalable 
+```    
+            
+- ```UserMail.isAvalable()``` returned ```false``` or ```true``` if user mail avalable 
 
 [Example test application class](https://github.com/gleba/ANE-Usermail/blob/master/testapp/src/Main.as)
 
