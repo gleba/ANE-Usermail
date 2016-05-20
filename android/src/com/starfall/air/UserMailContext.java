@@ -14,7 +14,7 @@ public class UserMailContext extends FREContext {
     @Override
     public Map<String, FREFunction> getFunctions() {
         Map<String, FREFunction> functionMap = new HashMap<String, FREFunction>();
-        functionMap.put("canSend", new UserMailCanSend());
+        functionMap.put("canSend", new UserMailAccountAvalable());
         return functionMap;
     }
 }
