@@ -53,12 +53,6 @@ public class UserMail {
 
     public var logger:Function;
 
-    public function addAndroidAccountType(type:String):void {
-        if (Capabilities.manufacturer.indexOf("Android") > -1) {
-            if (extContext)
-                extContext.call("addType", type)
-        }
-    }
 
     private function extContext_statusHandler(event:StatusEvent):void {
         trace("ane:" + event.level);

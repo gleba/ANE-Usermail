@@ -21,12 +21,6 @@ public class UserMailExtension implements FREExtension {
 
     @Override
     public void initialize() {
-        try {
-            UserMailExtension.accoundIds.put("com.google", true);
-            UserMailExtension.accoundIds.put("com.samsung.android.email", true);
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
     }
 
     public static void log(String message) {

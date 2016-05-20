@@ -11,12 +11,6 @@ public class Main extends Sprite {
     var textField:TextField = new TextField();
 
     public function Main() {
-//      ..Android additional account types configurations
-        UserMail.instance.addAndroidAccountType("com.yandex.passport");
-        UserMail.instance.addAndroidAccountType("ru.mail.mailapp");
-        UserMail.instance.addAndroidAccountType("com.sfr.android.sfrmail");
-        UserMail.instance.addAndroidAccountType("com.cloudmagic.mail");
-//        ...etc
 
         textField.height = Capabilities.screenResolutionY;
         textField.width = Capabilities.screenResolutionX;
