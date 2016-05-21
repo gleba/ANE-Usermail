@@ -40,7 +40,3 @@ check user email configuration adobe air native extension for ios and android
    2. ```UserMail.isAvalable()``` returned ```false``` or ```true``` if user mail avalable 
 
 [Example test application class](https://github.com/gleba/ANE-Usermail/blob/master/testapp/src/Main.as)
-
-### Added android mail account types by default
-- "com.google"
-- "com.samsung.android.email"
