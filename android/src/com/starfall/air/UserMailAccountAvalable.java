@@ -31,14 +31,14 @@ public class UserMailAccountAvalable implements FREFunction {
             for (Account account : accounts) {
                 for (ResolveInfo r : list) {
 
-                    UserMailExtension.log("packageName: " + r.activityInfo.applicationInfo.packageName+ "?contains? "+"account.type: " + account.type+" :::: " + r.activityInfo.applicationInfo.packageName.contains(account.type));
+                    UserMailExtension.log("app.package: " + r.activityInfo.applicationInfo.packageName+ " :?contains?: "+"account.type: " + account.type+" :::: " + r.activityInfo.applicationInfo.packageName.contains(account.type));
 
                     if (r.activityInfo.applicationInfo.packageName.contains(account.type)) {
                         return FREObject.newObject(true);
                     }
                 }
             }
-            return FREObject.newObject(true);
+            return FREObject.newObject(false);
         } catch (Exception exception) {
             UserMailExtension.log("UserMailCanSend exception " + exception.toString());
         }
